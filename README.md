@@ -43,7 +43,9 @@ Lose It! is a calorie counter & food diary diet website/App that helps you stick
 - [@Debasree-3031999](https://github.com/Debasree-3031999)
 
 
+## Run Locally
 
+-Pre-Requisite : VS Code needs to run json-server at port 8080 to fetch data after sigin/signup
 
 
 ## Website Sneak Peeks
