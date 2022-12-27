@@ -11,7 +11,7 @@ import { LOGIN_ERROR, LOGIN_LOADING, LOGIN_SUCCESS, LOGOUT, SIGNUP_ERROR, SIGNUP
 export const signupApi = (value)=>(dispatch)=>{
    let u = value.username
      dispatch({type:SIGNUP_LOADING,})
-     axios.post("https://enigmatic-woodland-19583.herokuapp.com/auth/signup",{
+     axios.post("http://localhost:8080/auth/signup",{
         ...value
      })
      .then((res)=>{localStorage.setItem("signupAuth",u)
@@ -22,7 +22,7 @@ export const signupApi = (value)=>(dispatch)=>{
 
 export const loginApi = (value)=>(dispatch)=>{
    dispatch({type:LOGIN_LOADING,})
-   axios.post("https://enigmatic-woodland-19583.herokuapp.com/auth/login",{
+   axios.post("http://localhost:8080/auth/login",{
       ...value
    })
    .then((res)=>dispatch({type:LOGIN_SUCCESS,payload:res.data}))
