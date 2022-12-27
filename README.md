@@ -9,7 +9,7 @@ Lose It! is a calorie counter & food diary diet website/App that helps you stick
 
 ## Deployed Site
 
-[Lose it! - Clone](https://loseit-clone.netlify.app/)
+[Lose it! - Clone](https://lose-it-clone-one.vercel.app/)
 
 
 
