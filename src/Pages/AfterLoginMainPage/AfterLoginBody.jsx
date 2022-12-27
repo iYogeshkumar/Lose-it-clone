@@ -40,7 +40,7 @@ const AfterLoginBody = () => {
 
   const hanldeSearch = (b, e) => {
     if (e.target.value) {
-      axios.get(`http://localhost:8080/${b}`).then((response) => {
+      axios.get(`https://tired-pink-codfish.cyclic.app/${b}`).then((response) => {
         console.log("response:", response);
         SetSearchData(response.data);
         setSearchDropdownBreak(true);
@@ -53,7 +53,7 @@ const AfterLoginBody = () => {
   };
   const hanldeSearch1 = (b, e) => {
     if (e.target.value) {
-      axios.get(`http://localhost:8080/${b}`).then((response) => {
+      axios.get(`https://tired-pink-codfish.cyclic.app/${b}`).then((response) => {
         console.log("response:", response);
         SetSearchData(response.data);
         setSearchDropdownlunch(true);
@@ -71,7 +71,7 @@ const AfterLoginBody = () => {
     let payload = { data: el.name, img: el.img };
 
     axios
-      .post(`http://localhost:8080/${food}`, {
+      .post(`https://tired-pink-codfish.cyclic.app/${food}`, {
         ...payload,
       })
       .then((res) => {
@@ -85,26 +85,26 @@ const AfterLoginBody = () => {
     setSearchDropdownlunch(false);
   };
   const getAddedData1 = () => {
-    axios.get(`http://localhost:8080/lunch_data`).then((res) => {
+    axios.get(`https://tired-pink-codfish.cyclic.app/lunch_data`).then((res) => {
       setlunch(res.data);
     });
   };
   const getAddedData = () => {
-    axios.get(`http://localhost:8080/breakfast_data`).then((res) => {
+    axios.get(`https://tired-pink-codfish.cyclic.app/breakfast_data`).then((res) => {
       setbreakfast(res.data);
     });
   };
 
   const DropSelect = (when) => {
     setSelectDrop(true);
-    axios.get(`http://localhost:8080/${when}`).then((res) => {
+    axios.get(`https://tired-pink-codfish.cyclic.app/${when}`).then((res) => {
       console.log("res:", res);
     });
   };
 
   const handleDeleteFood = (when, id) => {
     console.log("when:", when);
-    axios.delete(`http://localhost:8080/${when}/${id}`).then((res) => {
+    axios.delete(`https://tired-pink-codfish.cyclic.app/${when}/${id}`).then((res) => {
       if (when === "lunch_data") {
         getAddedData1();
       } else {
